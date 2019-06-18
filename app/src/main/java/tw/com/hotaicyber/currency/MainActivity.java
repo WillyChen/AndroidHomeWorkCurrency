@@ -37,17 +37,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void go_btn_click(View view) {
         if (edntd.getText().toString().isEmpty()) {
-            showCustomDialog("Problem", "Please enter your NTD amoun");
+            showCustomDialog(getString(R.string.Problem), getString(R.string.please_enter_ntd));
             return;
         }
 
         float ntd = Float.parseFloat(edntd.getText().toString());
-        Log.d("MainActivity","NTD: " + ntd);
 
         float usResult = (ntd / us);
         float jpResult = (ntd * jp);
 
-        showCustomDialog("Result","USD is " + Float.toString(usResult));
+        showCustomDialog(getString(R.string.result),getString(R.string.usd_is) + Float.toString(usResult));
 
         jp_text.setText(Float.toString(jpResult));
         us_text.setText(Float.toString(usResult));
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle(title)
                 .setMessage(message)
-                .setPositiveButton("OK",null)
+                .setPositiveButton(getString(R.string.ok),null)
                 .show();
     }
 
