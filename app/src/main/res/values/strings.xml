@@ -9,4 +9,5 @@
     <string name="jp">JP</string>
     <string name="go">GO</string>
     <string name="ntd">NTD</string>
+    <string name="none">None</string>
 </resources>
